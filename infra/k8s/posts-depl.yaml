@@ -14,5 +14,6 @@ spec:
     spec:
       containers:
         - name: posts
-          image: bahirazizi7/posts:0.0.5
+          image: bahirazizi/posts:latest
+          imagePullPolicy: Always
 
