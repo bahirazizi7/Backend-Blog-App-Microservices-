@@ -1,33 +1,33 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: moderation-depl
+  name: query-depl
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: moderation
+      app: query
   template:
     metadata:
       labels:
-        app: moderation
+        app: query
     spec:
       containers:
-        - name: moderation
-          image: bahirazizi/moderation
+        - name: query
+          image: bahirazizi/query
           imagePullPolicy: Always
 
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: moderation-srv
+  name: query-srv
 spec:
   selector:
-    app: moderation
+    app: query
   type: ClusterIP
   ports:
-    - name: moderation
+    - name: query
       protocol: TCP
-      port: 4003
-      targetPort: 4003
+      port: 4002
+      targetPort: 4002
