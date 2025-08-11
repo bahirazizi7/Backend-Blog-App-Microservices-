@@ -23,8 +23,8 @@ app.post("/post", async (req, res) => {
   posts[id] = { id, title };
 
   try {
-    console.log("Sending event to http://localhost:4005/events"); // ✅ Logging
-    await axios.post("http://localhost:4005/events", {
+    console.log("Sending event to http://event-bus-srv:4005/events"); // ✅ Logging
+    await axios.post("http://event-bus-srv:4005/events", {
       type: "PostCreated",
       data: { id, title },
     });
