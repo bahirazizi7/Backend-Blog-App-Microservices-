@@ -30,4 +30,4 @@ spec:
     - name: posts
       protocol: TCP
       port: 4000
-      targetPort: 400
+      targetPort: 4000
