@@ -6,7 +6,7 @@ metadata:
     kubernetes.io/ingress.class: nginx
 spec:
   rules:
-    - host: posts.com
+    - host: opulent-space-fishstick-p554xjxgjjgf9779-8080.app.github.dev
       http:
         paths:
           - path: /posts
